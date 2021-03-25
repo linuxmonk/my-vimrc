@@ -6,6 +6,13 @@
 " environment). I highly encourage to change/adapt the vimrc to your own
 " needs. Think of a vimrc as a garden that needs to be maintained and fostered
 " throughout years. Keep it clean and useful - Fatih Arslan
+"
+
+if empty(glob('~/.vim/autoload/plug.vim'))
+  silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
+    \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
+endif
 
 call plug#begin()
 Plug 'fatih/vim-go'
