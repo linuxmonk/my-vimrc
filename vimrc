@@ -31,6 +31,9 @@ Plug 'nvie/vim-flake8'
 Plug 'scrooloose/nerdtree'
 Plug 'Lokaltog/powerline', {'rtp': 'powerline/bindings/vim/'}
 Plug 'fisadev/vim-isort'
+Plug 'rust-lang/rust.vim'
+Plug 'preservim/tagbar'
+Plug 'vim-syntastic/syntastic'
 call plug#end()
 
 " 
@@ -235,3 +238,8 @@ syntax on
 
 " enable ctrlp
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+"
+" Rust configs
+"
+let g:rustfmt_autosave = 1
